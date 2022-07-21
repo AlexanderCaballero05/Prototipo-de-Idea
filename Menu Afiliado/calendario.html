@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Registar Afiliados</title>
+	<title>Calendario Actividades</title>
 	<meta charset="UTF-8">
+
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <script src="jsc/jquery.min.js"></script>
+	 <script src="jsc/moment.min.js"></script>
+
+	 <link rel="stylesheet" href="cssc/fullcalendar.min.css">
+	 <script src="jsc/fullcalendar.min.js"></script>
+	 <script src="jsc/es.js"></script>
+
+	 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<!-- SideBar -->
 	<section class="full-box cover dashboard-sideBar">
@@ -13,7 +25,7 @@
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				Syscomapp  <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+				SYSCOMAPP <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
@@ -42,24 +54,23 @@
 					</a>
 				</li>
 				<li>
-					<a href="estadisticas.html">
-						<i class="zmdi zmdi-card zmdi-hc-fw" ></i> Estadisticas
-					</a>
-				</li>
-				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i>Gestión de Afiliados <i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Calendario de Actividades <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="persona.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Persona </a>
+							<a href="calendario.html"><i class="zmdi zmdi-calender zmdi-hc-fw"></i>Calendario</a>
 						</li>
-						
 					</ul>
 				</li>
 				<li>
+
+
+
+
+
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-case zmdi-hc-fw"></i>Gestión de Proyectos<i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i>Estado de cuenta<i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
@@ -72,7 +83,7 @@
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-card zmdi-hc-fw"></i>Gestión de Pagos <i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i>Noticias de Proyectos<i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
@@ -81,9 +92,10 @@
 					
 					</ul>
 				</li>
+
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-card zmdi-hc-fw"></i>Contabilidad de Proyectos<i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> Comentarios y sugerencias<i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
@@ -131,14 +143,18 @@
 		
 
 		<div class="container-fluid">
+			
 		  <div class="page-header"> 
-			<div class="row">
-				<div class="col-md-6">
-					<h1 class="text-titles"  style="padding-left: 300px;"><i</i>Registrar Afiliados</h1>
+			  
+			<div class="row">   
+
+					
+				<div class="col-md-7">
+					<h1 class="text-titles"  style="padding-left: 300px;"><i</i>Calendario de Actividades </h1>
 				</div>
-				<div class="col-md-5" >
-				  <img src="./assets/img/loguito.jpg"  style="width: 120px;" >
-				</div>
+						<div class="col-md-5" >
+							<img src="./assets/img/loguito.jpg"  style="width: 120px;" >
+						</div>
 			</div>
 			
 		  </div>
@@ -146,142 +162,27 @@
 		
 		<div class="container-fluid">
 			<div class="row" >
-				<div  class="card text-white bg-primary mb-3" class="col-xs-12">
+				<div  class="card  mb-3" class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="nav-item">
-							<a class="nav-link active" style="color:#000000;" href="#new" data-toggle="tab">Agregar Afiliado</a>
-						</li>
-					  	<li class="nav-item">
-							<a href="personasregistradas.html">Lista Afiliado</a>
-						</li>
+					  	<li class="active"><a href="#new" data-toggle="tab"></a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
-							<div class="container-fluid">
-						<div class="card-body"> 	
-						<form action="">
-							<div class="row">   
-								<h5> Datos Generales del Afiliado</h5>
-                                <hr color="blue">
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Primer Nombre</label>
-										  <input class="form-control" type="text" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Segundo Nombre</label>
-										  <input class="form-control" type="text" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Primer Apellido</label>
-										  <input class="form-control" type="text" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Segundo Apellido</label>
-										  <input class="form-control" type="text" required>
-										</div>
-									</div>
-							</div>
-
-								<div class="row">   
-										<div class="col-md-3" > 
-									    	<div class="form-group">
-											  <label>Identidad</label>
-											  <input class="form-control" type="text" required>
-											</div>
-										</div>	 
-										<div class="col-md-3" > 
-											<div class="form-group">
-											  <label>Teléfono</label>
-											  <input class="form-control" type="text" required>
-											</div>
-										</div>
-										<div class="col-md-3" > 
-											<div class="form-group">
-											  <label for="exampleInputEmail1" >Correo Electronico</label>
-											  <input class="form-control" type="email" >
-											 </div>
-										</div>
-										<div class="col-md-3" > 
-											<div class="form-group">
-												<label >Sexo</label>
-												<select class="form-control select2">
-													<option>seleccione</option>
-													<option>Femenino</option>
-													<option>Masculino</option>
-												</select>
-											</div>
-										</div>
-								</div>
-								<div class="row">   
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Fecha Nacimiento</label>
-										  <input class="form-control" type="text" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-										  <label>Comunidad</label>
-										  <input class="form-control" type="text" >
-										 </div>
-									</div>	 
-									<div class="col-md-6" > 
-										<div class="form-group">
-											<label  >Proyectos a paticipar</label>
-											<div class="icheck-yellow d-inline">
-												<input class="form-check-input " type="checkbox"> <label class="form-check-label mx-2" >Alcantarillado </label>  
-												<input class="form-check-input " type="checkbox"> <label class="form-check-label mx-2">Agua Potable </label>  
-												<input class="form-check-input " type="checkbox"> <label class="form-check-label mx-2">Pavimentación de la calle</label> 
-											  </div>
-										</div>
-									</div>		
-								</div>
-
-								<h5> Datos del Usuario</h5>
-                                <hr color="blue">
-								<div class="row">
-									<div class="col-md-3" > 
-										<div class="form-group">
-											<label>Nombre de Usuario</label>
-											<input class="form-control" type="text" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-											<label >Contraseña</label>
-                                            <input maxlength="8" class="form-control" type="password" required>
-										</div>
-									</div>
-									<div class="col-md-3" > 
-										<div class="form-group">
-											<label >Estado</label>
-	                                        <select class="form-control">
-												<option>seleccione</option>
-												<option>Activo</option>
-												<option>Inactivo</option>
-											</select>
-										</div>
-									</div>
-								</div>
-
-								<br>
-								<p class="text-center">
-									<button href="#!" class="btn btn-success btn-raised btn-lg"> Guardar Afiliado</button>
-                                </p>
-						</form>
-					</div>			
-								
-							</div>
+							
+							
 						</div>
-					
-
+						<div class="container-fluid">
+							<div class="row">
+								  <div class="col"></div>
+								 <div class="col-7"><div id="CalendarioWeb"></div></div>
+								 <div class="col"></div>
+							</div>
+							 <br><br><br><br>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- Notifications area -->
@@ -359,13 +260,108 @@
 		    </div>
 	  	</div>
 	</div>
+	<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="tituloEvento"></h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		   <div id="descripcionEvento"></div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-danger btn-raised" data-dismiss="modal">Cerrar</button>
+		  <button type="button" class="btn btn-primary btn-raised">Agregar</button>
+		</div>
+	  </div>
+	</div>
+  </div>
 	<!--====== Scripts -->
-	<script src="./js/jquery-3.1.1.min.js"></script>
-	<script src="./js/sweetalert2.min.js"></script>
+    <script>
+		$(document).ready(function(){
+		   $('#CalendarioWeb').fullCalendar({
+			header:{
+				left: 'today,prev,next,Miboton',
+				center:'title',
+				right:'month,basicWeek,basicDay,agendaWeek,agendaDay'
+			},
+			customButtons:{
+				Miboton:{
+					text:"Nuevo",
+					click:function(){
+						alert("accion del boton");
+				} }
+			},
+			dayClick:function(date,jsEvent,view){
+              alert("Valor seleccionado: "+date.format());
+			  $(this).css('background-color','blue');
+			  $("#exampleModal").modal();
+			},
+			eventSources:[{
+				events: [
+				 {
+					title:'Evento 1,Tercera junta para el agua',
+					descripcion:"Se va hablar sobre como van los pagos",
+					start:'2022-07-23',
+					color:"black",
+			        textColor:"pink"
+				 },
+				 {
+					title:'Evento 2,Junta para hablar sobre los pagos',
+					descripcion:"Se va dejar espacios para quejas con respecto a los pagos",
+					start:'2022-07-28',
+					end:'2022-07-30',
+					color:"black",
+			        textColor:"yellow"
+				 },
+				 {
+					title:'Evento 4,Junta para hablar sobre las pavimentaciones',
+					descripcion:"Se va tratar que dias son los que se haran las pavimentaciones",
+					start:'2022-08-15',
+					end:'2022-08-18',
+					color:"yellow",
+			        textColor:"black"
+				 },
+				 {
+					title:'Reunion Inicial',
+					descripcion:"Se va hablar sobre todos los proyectos",
+					start:'2022-07-04T12:40',
+					allDay:false,
+					color:"red",
+			        textColor:"black"
+				 },
+				 {
+					title:'Evento 3,Reunion para convivio',
+					start:'2022-08-11T12:30',
+					allDay:false,
+					color:"black",
+			        textColor:"green"
+				 }
+			   ],
+			   color:"black",
+			   textColor:"yellow"
+
+			}],
+			eventClick: function(calEvent,jsEvent,view){
+				$('#tituloEvento').html(calEvent.title);
+				$('#descripcionEvento').html(calEvent.descripcion);
+				$("#exampleModal").modal();
+			}
+			
+
+		   });
+		});
+	</script>
+
+
+
 
 	<!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
 	<script src="./js/material.min.js"></script>
 	<script src="./js/ripples.min.js"></script>
 	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
