@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Reporte de Matrícula
+		      Proyecto Prosecar
+	
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="./css/main.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet"  href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/buttons.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+
+</head>
+<body>
+	 <!-- SideBar -->
+	 <section class="full-box cover dashboard-sideBar">
+        <div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+        <div class="full-box dashboard-sideBar-ct">
+            <!--SideBar Title -->
+            <div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+                Syscomapp <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+            </div>
+            <!-- SideBar User info -->
+            <div class="full-box dashboard-sideBar-UserInfo">
+                <figure class="full-box">
+                    <img src="./assets/img/avatar.png" alt="UserIcon">
+                    <figcaption class="text-center text-titles">Usuario Afiliado</figcaption>
+                </figure>
+                <ul class="full-box list-unstyled text-center">
+                    <li>
+                        <a href="#!">
+                            <i class="zmdi zmdi-settings"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="btn-exit-system">
+                            <i class="zmdi zmdi-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- SideBar Menu -->
+            <ul class="list-unstyled full-box dashboard-sideBar-Menu">
+                <li>
+                    <a href="home.html">
+                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw"> </i> Inicio
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-account-add zmdi-hc-fw"></i>Calendario de Actividades<i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class="list-unstyled full-box">
+                        <li>
+                            <a href="calendario.html"><i class="zmdi zmdi-calender zmdi-hc-fw"></i>Calendario</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+
+
+
+
+
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-case zmdi-hc-fw"></i>Estados de cuenta<i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class="list-unstyled full-box">
+                        <li>
+                            <a href="EstadosdeCuenta.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i>Pagos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i>Noticias de Proyectos<i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class="list-unstyled full-box">
+                        <li>
+                            <a href="citas.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i>Pagos</a>
+                        </li>
+                        <li>
+                            <a href="noticias.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i>Noticias</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i>Comentarios y sugerencias<i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class="list-unstyled full-box">
+                        <li>
+                            <a href="citas.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Cita Psicológica</a>
+                        </li>
+
+                    </ul>
+                </li>
+              
+             
+            </ul>
+        </div>
+    </section>
+
+
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+					
+				</li>
+				<span style="color:white;padding-right: 50px;">Lunes, 08 de noviembre del 2021</span>
+				<span style="color:white; padding-right: 50px; ">Hora: 2:50</span>
+				
+
+				
+				
+			</ul>
+		</nav>
+		<!-- Content page -->
+		<div class="container-fluid">
+			<div class="page-header">
+				<div class="row">   
+
+					
+					<div class="col-md-8">
+						<h1 class="text-titles " style="padding-left: 120px; padding-top:20px;"><i</i>Noticias de los Proyectos</h1>
+					</div>
+					<div class="col-md-2" >
+						<img src="./assets/img/logo2 azul.jpg" style="width: 120px;">
+
+					</div>
+	
+			    </div>
+					
+			</div>
+			
+		</div>
+
+	
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <form>
+					<div class="form-group">
+					  <label for="recipient-name" class="col-form-label">Recipient:</label>
+					  <input type="text" class="form-control" id="recipient-name">
+					</div>
+					<div class="form-group">
+					  <label for="message-text" class="col-form-label">Message:</label>
+					  <textarea class="form-control" id="message-text"></textarea>
+					</div>
+				  </form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Send message</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="container-fluid">
+		  <div class="card mb-3">
+			<img src="assets/img/alcantarillado.jpg" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Alcantarillado</h5>
+			  <p class="card-text">Es el servicio de recolección de residuos, principalmente líquidos por medio de tuberías y conductos...
+				  El proyecto está en su fase de proceso, el presupuesto estimado probablemente suba al menos un 20% debido a las recientes lluvias,
+				  dejando dañado parte del trabajo que ya estaba hecho, se le invita a la comunidad no botar basura en la calle, para poder mantener
+				  el alcantarillado libre y que de esta forma no hayan inundaciones, No sea cochino :)
+			  </p>
+			  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div>
+		  </div>
+		  <div class="card">
+		  <img src="assets/img/pavimentación.jpg" class="card-img-bottom" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Pavimentación de la primera calle</h5>
+			  <p class="card-text">La pavimentación consiste en la colocación de capas de materiales en el suelo o nivel superior ...
+				Está a cargo del Ingeniero Kim, que ha demostrado gran capacidad para el trabajo, el presupuesto se manejó de la mejor manera
+				se estima que el proyecto concluta el viernes de la siguiente semana, dejando como tal 6 meses de un buen trabajo :D</p>
+			  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div>
+			
+		  </div>
+		  <br><!-- salto de pagina -->
+		  <div class="card mb-3">
+			<img src="assets/img/aguaPotable.jpg" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Agua Potable</h5>
+			  <p class="card-text">Es agua entubada con tratamiento químico y de filtrado, sin llegar a ser pura o potable..
+				  El proyecto falta por llegar a las casas que recien se construyeron o que son relativamente nuevas en la colonia,
+				  se estima que para dentro 2 meses todas las casas de la comunidad tengan agua potable, todo depende también 
+				  de que los pagos por parte de las personas se entreguen en tiempo y forma, así que si tiene pagos pendientes... 
+				  ¿Qué espera para pagar? :)
+			  </p>
+			  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			</div>
+		  </div>
+		  <p></p>
+		</div><!-- Fin del container fluid -->
+
+    
+
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center">
+				Notifications <i class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-triangle"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">17m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				    </div>
+			  	</div>
+			  	<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-octagon"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">15m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				    </div>
+			  	</div>
+			  	<div class="list-group-separator"></div>
+				<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-help"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">10m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				    </div>
+				</div>
+			  	<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-info"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">8m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				    </div>
+			  	</div>
+			</div>
+
+		</div>
+	</section>
+
+	
+
+	
+
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+   
+   <script src="js/jquery-3.3.1.js"></script>
+   <script src="js/jquery.dataTables.min.js"></script>
+   <script src="js/dataTables.buttons.min.js"></script>
+   <script src="js/buttons.flash.min.js"></script>
+   <script src="js/jszip.min.js"></script>
+   <script src="js/pdfmake.min.js"></script>
+   <script src="js/vfs_fonts.js"></script>
+   <script src="js/buttons.html5.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script src="js/scripts.js"></script>
+   <script src="js/bootstrap-toggle.min.js"></script>
+ 
+  <script>
+    
+    $('#tabla').DataTable();
+    
+  </script>
+  
+    
+  
+</body>
+</html>
